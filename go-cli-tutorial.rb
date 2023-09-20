@@ -5,20 +5,20 @@
 class GoCliTutorial < Formula
   desc ""
   homepage ""
-  version "0.1.4"
+  version "0.1.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Minooo1/go-cli-tutorial/releases/download/v0.1.4/go-cli-tutorial_Darwin_x86_64.tar.gz"
-      sha256 "1c4e1a4cbfd55de70f2e336b0d266d932ad1e30a3063c672e0b46516da94f65c"
+      url "https://github.com/Minooo1/go-cli-tutorial/releases/download/v0.1.5/go-cli-tutorial_Darwin_amd64.tar.gz"
+      sha256 "c7a17f95081b54cf9c01b57cc18478acc1aa43202df0f6dbc435fe19a2b8173a"
 
       def install
         bin.install "go-cli-tutorial"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Minooo1/go-cli-tutorial/releases/download/v0.1.4/go-cli-tutorial_Darwin_arm64.tar.gz"
-      sha256 "36778c4893883ed334c0b4ca66ed57ea6db5ecf752546de879b7a3ced8d51309"
+      url "https://github.com/Minooo1/go-cli-tutorial/releases/download/v0.1.5/go-cli-tutorial_Darwin_arm64.tar.gz"
+      sha256 "2f5a1730a938ff9835a5489a4d1b6fd1a7a0679298808a113651822cc28fa3b9"
 
       def install
         bin.install "go-cli-tutorial"
@@ -27,17 +27,17 @@ class GoCliTutorial < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Minooo1/go-cli-tutorial/releases/download/v0.1.4/go-cli-tutorial_Linux_arm64.tar.gz"
-      sha256 "1e66500dbcac43349c6b63e1aa722396aa57705fbdafcf9a43d49dde9a8ef418"
+    if Hardware::CPU.intel?
+      url "https://github.com/Minooo1/go-cli-tutorial/releases/download/v0.1.5/go-cli-tutorial_Linux_amd64.tar.gz"
+      sha256 "ab4539823e718afff3c96fd6001c2d5c093b86ed036d73c11b7a1373ae965dc1"
 
       def install
         bin.install "go-cli-tutorial"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Minooo1/go-cli-tutorial/releases/download/v0.1.4/go-cli-tutorial_Linux_x86_64.tar.gz"
-      sha256 "8bad413326b051cdf40d8942db7d279c8d9f63d293f5742503914e324891677a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Minooo1/go-cli-tutorial/releases/download/v0.1.5/go-cli-tutorial_Linux_arm64.tar.gz"
+      sha256 "62bf085aa1ded76ac22b698440eb3a836cf71c4ce6e78f40126f79febf056087"
 
       def install
         bin.install "go-cli-tutorial"
