@@ -5,20 +5,20 @@
 class GoCliTutorial < Formula
   desc ""
   homepage ""
-  version "0.1.5"
+  version "0.1.6"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Minooo1/go-cli-tutorial/releases/download/v0.1.5/go-cli-tutorial_Darwin_amd64.tar.gz"
-      sha256 "c7a17f95081b54cf9c01b57cc18478acc1aa43202df0f6dbc435fe19a2b8173a"
+    if Hardware::CPU.arm?
+      url "https://github.com/Minooo1/go-cli-tutorial/releases/download/v0.1.6/go-cli-tutorial_Darwin_arm64.tar.gz"
+      sha256 "6bf20d417203cc32c70372c9c1fe4d981dc7704ce3dc3ee249ce9c29dda169e0"
 
       def install
         bin.install "go-cli-tutorial"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/Minooo1/go-cli-tutorial/releases/download/v0.1.5/go-cli-tutorial_Darwin_arm64.tar.gz"
-      sha256 "2f5a1730a938ff9835a5489a4d1b6fd1a7a0679298808a113651822cc28fa3b9"
+    if Hardware::CPU.intel?
+      url "https://github.com/Minooo1/go-cli-tutorial/releases/download/v0.1.6/go-cli-tutorial_Darwin_x86_64.tar.gz"
+      sha256 "3b010defe414b0bc4ee435f56b2b16935d13b5a6a89ebb01c0d92708225f165e"
 
       def install
         bin.install "go-cli-tutorial"
@@ -27,17 +27,17 @@ class GoCliTutorial < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/Minooo1/go-cli-tutorial/releases/download/v0.1.5/go-cli-tutorial_Linux_amd64.tar.gz"
-      sha256 "ab4539823e718afff3c96fd6001c2d5c093b86ed036d73c11b7a1373ae965dc1"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Minooo1/go-cli-tutorial/releases/download/v0.1.6/go-cli-tutorial_Linux_arm64.tar.gz"
+      sha256 "2180ba6ae3ec34b707356302a33f137cb21a9d05910aa9eaed1ca44aa888f836"
 
       def install
         bin.install "go-cli-tutorial"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Minooo1/go-cli-tutorial/releases/download/v0.1.5/go-cli-tutorial_Linux_arm64.tar.gz"
-      sha256 "62bf085aa1ded76ac22b698440eb3a836cf71c4ce6e78f40126f79febf056087"
+    if Hardware::CPU.intel?
+      url "https://github.com/Minooo1/go-cli-tutorial/releases/download/v0.1.6/go-cli-tutorial_Linux_x86_64.tar.gz"
+      sha256 "7530b4236c9701746de182effcadbd58499fc4186166752f6bfc012fd0e6eeb0"
 
       def install
         bin.install "go-cli-tutorial"
