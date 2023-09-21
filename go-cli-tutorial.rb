@@ -5,20 +5,20 @@
 class GoCliTutorial < Formula
   desc ""
   homepage ""
-  version "0.1.6"
+  version "0.1.7"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/Minooo1/go-cli-tutorial/releases/download/v0.1.6/go-cli-tutorial_Darwin_arm64.tar.gz"
-      sha256 "6bf20d417203cc32c70372c9c1fe4d981dc7704ce3dc3ee249ce9c29dda169e0"
+    if Hardware::CPU.intel?
+      url "https://github.com/Minooo1/go-cli-tutorial/releases/download/v0.1.7/go-cli-tutorial_Darwin_x86_64.tar.gz"
+      sha256 "fbc52f0c295743c645ad6c1923d3f32ca356972bfa0527379cd3ccf843d282fd"
 
       def install
         bin.install "go-cli-tutorial"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Minooo1/go-cli-tutorial/releases/download/v0.1.6/go-cli-tutorial_Darwin_x86_64.tar.gz"
-      sha256 "3b010defe414b0bc4ee435f56b2b16935d13b5a6a89ebb01c0d92708225f165e"
+    if Hardware::CPU.arm?
+      url "https://github.com/Minooo1/go-cli-tutorial/releases/download/v0.1.7/go-cli-tutorial_Darwin_arm64.tar.gz"
+      sha256 "1b85e97a5a25cb7e3a5c20bd79166aad2c87b6b6834ab1f665c5386cf7df2c3d"
 
       def install
         bin.install "go-cli-tutorial"
@@ -28,16 +28,16 @@ class GoCliTutorial < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Minooo1/go-cli-tutorial/releases/download/v0.1.6/go-cli-tutorial_Linux_arm64.tar.gz"
-      sha256 "2180ba6ae3ec34b707356302a33f137cb21a9d05910aa9eaed1ca44aa888f836"
+      url "https://github.com/Minooo1/go-cli-tutorial/releases/download/v0.1.7/go-cli-tutorial_Linux_arm64.tar.gz"
+      sha256 "b936c005915258f7409c743f191afb73085871ba4f9bf84d516c5199988a9740"
 
       def install
         bin.install "go-cli-tutorial"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Minooo1/go-cli-tutorial/releases/download/v0.1.6/go-cli-tutorial_Linux_x86_64.tar.gz"
-      sha256 "7530b4236c9701746de182effcadbd58499fc4186166752f6bfc012fd0e6eeb0"
+      url "https://github.com/Minooo1/go-cli-tutorial/releases/download/v0.1.7/go-cli-tutorial_Linux_x86_64.tar.gz"
+      sha256 "bf68e2f768d6fd2810af446e22c96eadf9e2f829b699ad7efbcb5b60b52d64d9"
 
       def install
         bin.install "go-cli-tutorial"
