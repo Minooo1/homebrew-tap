@@ -5,20 +5,20 @@
 class AsciiArt < Formula
   desc ""
   homepage ""
-  version "2.1"
+  version "2.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Minooo1/ascii-art/releases/download/v2.1/ascii-art_Darwin_x86_64.tar.gz"
-      sha256 "1894cab50aa44845df1dfd5781617b1774dfc2ac04bcae203671227b26920904"
+      url "https://github.com/Minooo1/ascii-art/releases/download/v2.2/ascii-art_Darwin_x86_64.tar.gz"
+      sha256 "c70fea34609bd2d6613cbc0bca1455eeaad20d4a59d803a349b23574f2794e2a"
 
       def install
         bin.install "ascii-art"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Minooo1/ascii-art/releases/download/v2.1/ascii-art_Darwin_arm64.tar.gz"
-      sha256 "2d3bfcb73ed3df0de4808f7b56e91e7d8fe5b5bb8a0c61092e7b71d70ab946e0"
+      url "https://github.com/Minooo1/ascii-art/releases/download/v2.2/ascii-art_Darwin_arm64.tar.gz"
+      sha256 "2e4fac037a86b22575770270794898aeb608d921173b056a1156e8ac7ac1beec"
 
       def install
         bin.install "ascii-art"
@@ -28,16 +28,16 @@ class AsciiArt < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Minooo1/ascii-art/releases/download/v2.1/ascii-art_Linux_x86_64.tar.gz"
-      sha256 "049dccb67c1e6f63864dced957e6c7a9c1b49ce3518951de8555bada50e151aa"
+      url "https://github.com/Minooo1/ascii-art/releases/download/v2.2/ascii-art_Linux_x86_64.tar.gz"
+      sha256 "670af4aecfd6e3e26a86057eaee6775eb315b96a1dc91949a0bfd4d1551a316b"
 
       def install
         bin.install "ascii-art"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Minooo1/ascii-art/releases/download/v2.1/ascii-art_Linux_arm64.tar.gz"
-      sha256 "8533c7e3d0c62cc4eaa671ac3cc7e3abeb2de33b36390a1abbdfcf127fb2ae72"
+      url "https://github.com/Minooo1/ascii-art/releases/download/v2.2/ascii-art_Linux_arm64.tar.gz"
+      sha256 "33fdee9a8005ab7e34fe2a51fab4cbf43787acc65e77e1eb743c114083af1772"
 
       def install
         bin.install "ascii-art"
