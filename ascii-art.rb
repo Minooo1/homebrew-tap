@@ -5,20 +5,20 @@
 class AsciiArt < Formula
   desc ""
   homepage ""
-  version "2.5"
+  version "2.5.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Minooo1/ascii-art/releases/download/v2.5/ascii-art_Darwin_x86_64.tar.gz"
-      sha256 "b35d7d34f6eef9c5849bb4d5849874d3b18fbe0616141ec09843d2ace642c920"
+    if Hardware::CPU.arm?
+      url "https://github.com/Minooo1/ascii-art/releases/download/v2.5.1/ascii-art_Darwin_arm64.tar.gz"
+      sha256 "36b6e668e695e898c344d4ff310b17239830f5bc8da6786b1c6f3d0b1dd9b252"
 
       def install
         bin.install "ascii-art"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/Minooo1/ascii-art/releases/download/v2.5/ascii-art_Darwin_arm64.tar.gz"
-      sha256 "8684e3a13641e4a22bebaa529cb37c2dfa44bcab63a641c47ac7aa832242cb94"
+    if Hardware::CPU.intel?
+      url "https://github.com/Minooo1/ascii-art/releases/download/v2.5.1/ascii-art_Darwin_x86_64.tar.gz"
+      sha256 "4e9b5f5d7386674b4d8c496f09942bf88cbfedde3a60c081a0b78df2449cce95"
 
       def install
         bin.install "ascii-art"
@@ -27,17 +27,17 @@ class AsciiArt < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Minooo1/ascii-art/releases/download/v2.5/ascii-art_Linux_arm64.tar.gz"
-      sha256 "3f19883d923619f35558577800da11b544415b5fd3950ee2dda76ed42a6ff518"
+    if Hardware::CPU.intel?
+      url "https://github.com/Minooo1/ascii-art/releases/download/v2.5.1/ascii-art_Linux_x86_64.tar.gz"
+      sha256 "570e6ff46c9c82014d1ff9469c7f6a1ecf4030c68961dff591a95bf618a5e991"
 
       def install
         bin.install "ascii-art"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Minooo1/ascii-art/releases/download/v2.5/ascii-art_Linux_x86_64.tar.gz"
-      sha256 "17c2f0b4c2fd898bae33f72c6a1ea30bad1558d3368a9d02f41b1a1b6864b4d1"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Minooo1/ascii-art/releases/download/v2.5.1/ascii-art_Linux_arm64.tar.gz"
+      sha256 "c7e2825df65c71ff1ebbf19b4eb8bd951df1319282631522a2a23a1efe60adfa"
 
       def install
         bin.install "ascii-art"
