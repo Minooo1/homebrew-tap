@@ -5,20 +5,20 @@
 class AsciiArt < Formula
   desc ""
   homepage ""
-  version "2.5.1"
+  version "2.5.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Minooo1/ascii-art/releases/download/v2.5.1/ascii-art_Darwin_arm64.tar.gz"
-      sha256 "36b6e668e695e898c344d4ff310b17239830f5bc8da6786b1c6f3d0b1dd9b252"
+      url "https://github.com/Minooo1/ascii-art/releases/download/v2.5.2/ascii-art_Darwin_arm64.tar.gz"
+      sha256 "173a85000b34a17010a0353ef3fdf08522c5346cf52d2e4ad90b8cb47c015016"
 
       def install
         bin.install "ascii-art"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Minooo1/ascii-art/releases/download/v2.5.1/ascii-art_Darwin_x86_64.tar.gz"
-      sha256 "4e9b5f5d7386674b4d8c496f09942bf88cbfedde3a60c081a0b78df2449cce95"
+      url "https://github.com/Minooo1/ascii-art/releases/download/v2.5.2/ascii-art_Darwin_x86_64.tar.gz"
+      sha256 "6936b1ab6ec0928f33d1980ea7318b6552a0989ccb4efb855438eea82c69e1a0"
 
       def install
         bin.install "ascii-art"
@@ -28,16 +28,16 @@ class AsciiArt < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/Minooo1/ascii-art/releases/download/v2.5.1/ascii-art_Linux_x86_64.tar.gz"
-      sha256 "570e6ff46c9c82014d1ff9469c7f6a1ecf4030c68961dff591a95bf618a5e991"
+      url "https://github.com/Minooo1/ascii-art/releases/download/v2.5.2/ascii-art_Linux_x86_64.tar.gz"
+      sha256 "70ca57b46c71ebfdf01ea059209ebd4fea6fb584898a31ecc2e9bc4abedf4658"
 
       def install
         bin.install "ascii-art"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Minooo1/ascii-art/releases/download/v2.5.1/ascii-art_Linux_arm64.tar.gz"
-      sha256 "c7e2825df65c71ff1ebbf19b4eb8bd951df1319282631522a2a23a1efe60adfa"
+      url "https://github.com/Minooo1/ascii-art/releases/download/v2.5.2/ascii-art_Linux_arm64.tar.gz"
+      sha256 "8338d04b0e2e3c530fbe32d4ec747a43461618466df5d7fb344840c9b0c4d47d"
 
       def install
         bin.install "ascii-art"
