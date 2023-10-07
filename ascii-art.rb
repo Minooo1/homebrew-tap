@@ -5,20 +5,20 @@
 class AsciiArt < Formula
   desc ""
   homepage ""
-  version "2.5.2"
+  version "2.5.3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/Minooo1/ascii-art/releases/download/v2.5.2/ascii-art_Darwin_arm64.tar.gz"
-      sha256 "173a85000b34a17010a0353ef3fdf08522c5346cf52d2e4ad90b8cb47c015016"
+    if Hardware::CPU.intel?
+      url "https://github.com/Minooo1/ascii-art/releases/download/v2.5.3/ascii-art_Darwin_x86_64.tar.gz"
+      sha256 "3668970d50af418a164e5926ac0f9a502c3896a479df4a23a253f413cf5d0378"
 
       def install
         bin.install "ascii-art"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/Minooo1/ascii-art/releases/download/v2.5.2/ascii-art_Darwin_x86_64.tar.gz"
-      sha256 "6936b1ab6ec0928f33d1980ea7318b6552a0989ccb4efb855438eea82c69e1a0"
+    if Hardware::CPU.arm?
+      url "https://github.com/Minooo1/ascii-art/releases/download/v2.5.3/ascii-art_Darwin_arm64.tar.gz"
+      sha256 "0876abceb1f5d01675ca8cea57c39e67f97d78438cfd84fa7cacde7c2183d6d0"
 
       def install
         bin.install "ascii-art"
@@ -27,17 +27,17 @@ class AsciiArt < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/Minooo1/ascii-art/releases/download/v2.5.2/ascii-art_Linux_x86_64.tar.gz"
-      sha256 "70ca57b46c71ebfdf01ea059209ebd4fea6fb584898a31ecc2e9bc4abedf4658"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/Minooo1/ascii-art/releases/download/v2.5.3/ascii-art_Linux_arm64.tar.gz"
+      sha256 "7b86da6fefba0dfd80651960d563b8012e2dca37f230fbc5f08d0accdf69c468"
 
       def install
         bin.install "ascii-art"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Minooo1/ascii-art/releases/download/v2.5.2/ascii-art_Linux_arm64.tar.gz"
-      sha256 "8338d04b0e2e3c530fbe32d4ec747a43461618466df5d7fb344840c9b0c4d47d"
+    if Hardware::CPU.intel?
+      url "https://github.com/Minooo1/ascii-art/releases/download/v2.5.3/ascii-art_Linux_x86_64.tar.gz"
+      sha256 "e3868a5641de82a559448b22836041a53bce4bcc3de91a512c29ed3c7dd75008"
 
       def install
         bin.install "ascii-art"
